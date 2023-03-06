@@ -55,7 +55,6 @@ function playGame() {
 			continue;
 		}
 		if (roundResult === 'This round is a tie!') {
-			console.log('This round is a tie!');
 			console.log(roundResult);
 		} else if (roundResult.startsWith('You won')) {
 			playerScore++;

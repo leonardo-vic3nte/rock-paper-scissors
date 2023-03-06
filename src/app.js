@@ -39,3 +39,44 @@ function playRound(playerSelection, computerSelection) {
 	}
 	return 'Something went wrong...';
 }
+
+function playGame() {
+	let playerScore = 0;
+	let computerScore = 0;
+	for (let i = 1; i <= 5; i++) {
+		const playerChoice = prompt('Choose rock, paper or scissors'); // PlayRound() already handles input validation
+		if (playerChoice === null) {
+			throw new Error('Game cancelled');
+		}
+		console.log(`${i}º round`);
+		const roundResult = playRound(playerChoice, getComputerChoice());
+		if (roundResult === 'invalid') {
+			console.log('Invalid input, skipping this round');
+			continue;
+		}
+		if (roundResult === 'This round is a tie!') {
+			console.log('This round is a tie!');
+			console.log(roundResult);
+		} else if (roundResult.startsWith('You won')) {
+			playerScore++;
+			console.log(roundResult);
+		} else {
+			computerScore++;
+		}
+		console.log(
+			`Current score is: Player ${playerScore} Computer ${computerScore}`
+		);
+	}
+	console.log('------------------------------------');
+	console.log('Game ended!');
+	console.log(
+		`You scored ${playerScore} points and the computer scored ${computerScore} points`
+	);
+	if (playerScore === computerScore) {
+		console.log('It is a tie');
+	} else if (playerScore > computerScore) {
+		console.log('You won! Congratulations!');
+	} else {
+		console.log('You lost...Feel free to try again though!');
+	}
+}

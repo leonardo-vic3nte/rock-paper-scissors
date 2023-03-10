@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+#header {
+  width: 100%;
+  background-color: ;
+}
+
+#footer {
+  width: 100%;
+  padding: 10px;
+}
+
+.github-icon {
+  height: auto;
+  width: 1em;
+}

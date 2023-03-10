@@ -4,18 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="../src/app.js"></script>
     <title>Rock Paper Scissors!</title>
   </head>
 
   <body>
-    <button id="rock-btn">Rock</button>
-    <button id="paper-btn">Paper</button>
-    <button id="scissors-btn">Scissors</button>
+    <header id="header">
+      <h1 id="tittle">Rock Paper Scissors!</h1>
+    </header>
 
     <p class="player">Player score: <spam id="playerScore">0</spam></p>
     <p class="computer">Computer score: <spam id="computerScore">0</spam></p>
-
     <p id="game-prompt">Hello! Press any button to begin</p>
+    <div class="card"></div>
+
+    <footer id="footer">
+      &copy; Leonardo Vicente de Oliveira
+      <img class="github-icon" src="../public/github-mark.svg" alt="" />
+    </footer>
   </body>
 </html>

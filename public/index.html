@@ -16,13 +16,34 @@
 
     <main id="main-container">
       <div class="player-card">
+        <img
+          src="../public/player-avatar.png"
+          alt="avatar of a person"
+          class="player-avatar"
+        />
+        <ul class="player-buttons">
+          <button class="player-rock">🗿</button>
+          <button class="player-paper">📄</button>
+          <button class="player-scissors">✂️</button>
+        </ul>
         <p>Player score: <span id="playerScore">0</span></p>
       </div>
 
       <div class="computer-card">
+        <img
+          src="../public/computer-avatar.png"
+          alt="bot avatar"
+          class="computer-avatar"
+        />
+        <ul class="computer-buttons">
+          <button class="computer-rock">🗿</button>
+          <button class="computer-paper">📄</button>
+          <button class="computer-scissors">✂️</button>
+        </ul>
         <p>Computer score: <span id="computerScore">0</span></p>
       </div>
     </main>
+
     <footer id="footer">
       <div class="game-prompt">
         <p class="prompt-text">Press any button to begin!</p>

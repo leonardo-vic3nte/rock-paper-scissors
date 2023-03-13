@@ -1,14 +1,11 @@
 const rock = 'rock';
-const rockBtn = document.getElementById('rock-btn');
-
 const paper = 'paper';
-const paperBtn = document.getElementById('paper-btn');
-
 const scissors = 'scissors';
+
+const rockBtn = document.getElementById('rock-btn');
+const paperBtn = document.getElementById('paper-btn');
 const scissorsBtn = document.getElementById('scissors-btn');
-
 const gamePrompt = document.getElementById('game-prompt');
-
 const playerScoreDisplay = document.getElementById('playerScore');
 const computerScoreDisplay = document.getElementById('computerScore');
 
@@ -21,7 +18,7 @@ function getComputerChoice() {
   return validOutputs[randomIndex];
 }
 
-// Outputs 1 for win, 0 for tie, -1 for loss
+// Outputs 1 for win, 0 for tie, -1 for loss //
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     return 0;
@@ -87,20 +84,24 @@ function isOver() {
   }
 }
 
-rockBtn.addEventListener('click', () => {
-  const result = playRound('rock', getComputerChoice());
-  handleResult(result);
-  isOver();
-});
+function main() {
+  rockBtn.addEventListener('click', () => {
+    const result = playRound('rock', getComputerChoice());
+    handleResult(result);
+    isOver();
+  });
 
-paperBtn.addEventListener('click', () => {
-  const result = playRound('paper', getComputerChoice());
-  handleResult(result);
-  isOver();
-});
+  paperBtn.addEventListener('click', () => {
+    const result = playRound('paper', getComputerChoice());
+    handleResult(result);
+    isOver();
+  });
 
-scissorsBtn.addEventListener('click', () => {
-  const result = playRound('scissors', getComputerChoice());
-  handleResult(result);
-  isOver();
-});
+  scissorsBtn.addEventListener('click', () => {
+    const result = playRound('scissors', getComputerChoice());
+    handleResult(result);
+    isOver();
+  });
+}
+
+main();

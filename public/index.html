@@ -5,12 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../public/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
     <script defer src="../src/app.js"></script>
     <title>Rock Paper Scissors!</title>
   </head>
@@ -20,12 +14,19 @@
       <h1 class="header-tittle">Rock Paper Scissors!</h1>
     </header>
 
-    <p class="player">Player score: <spam id="playerScore">0</spam></p>
-    <p class="computer">Computer score: <spam id="computerScore">0</spam></p>
-    <p id="game-prompt">Hello! Press any button to begin</p>
-    <div class="card"></div>
+    <main id="main-container">
+      <div class="player-card">
+        <p>Player score: <span id="playerScore">0</span></p>
+      </div>
 
+      <div class="computer-card">
+        <p>Computer score: <span id="computerScore">0</span></p>
+      </div>
+    </main>
     <footer id="footer">
+      <div class="game-prompt">
+        <p class="prompt-text">Press any button to begin!</p>
+      </div>
       <p class="footer-text">
         &copy; Leonardo Vicente de Oliveira
         <a href="https://github.com/leonardo-vic3nte">
